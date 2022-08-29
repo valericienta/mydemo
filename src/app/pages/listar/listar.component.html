@@ -1,0 +1,31 @@
+<div style="margin: 100px;">
+<h1>Products</h1>
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Created Date</th>
+        <th scope="col">Tags</th>
+        <th scope="col">Stock</th>
+        <th scope="col">Comments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor ="let item of global.data">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.price | number: '1.2'}}</td>
+        <td>{{item.date |  date: 'dd-MM-yyyy'}}</td>
+        <td>{{item.tags}}</td>
+        <td [ngClass]="{'red': item.stock==0, 'green': item.stock> 0}" >{{item.stock}}</td>
+        <td>{{item.stock | stocklevel}}</td>
+      </tr>
+    </tbody>
+</table>
+<button type="button" class="btn btn-danger" (click)="goCrear()">Crear</button>
+
+
+</div>

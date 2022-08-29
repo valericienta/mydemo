@@ -1,0 +1,24 @@
+<form #formCrear="ngForm" class="content" (ngSubmit)="save(formCrear)">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Name</label>
+        <input type="email" class="form-control" name="name" required [(ngModel)]="product.name" aria-describedby="emailHelp" placeholder="Product Name">
+      </div>
+    <div class="form-group mt-2">
+        <label for="exampleInputEmail1">Price</label>
+        <input type="number" class="form-control" name="price" required [(ngModel)]="product.price" aria-describedby="emailHelp" placeholder="Price">  
+      </div>
+    <div class="form-group mt-2">
+        <label for="exampleInputEmail1">Stock</label>
+        <input type="number" class="form-control" name="stock"required [(ngModel)]="product.stock" aria-describedby="emailHelp" placeholder="Price">   
+      </div>
+    <div class="form-group mt-2">
+        <label for="exampleInputEmail1">Search Tags</label>
+        <input type="string" class="form-control" name="tags" placeholder="Tag" [(ngModel)]="newtag">   <button type="button" class="btn btn-secondary m-2" style="float: right; display: inline" (click)="add()">+</button>
+        <input type="string" class="form-control"  name="tags" required [(ngModel)]="tags" aria-describedby="emailHelp" placeholder="Search Tags">   
+      </div>
+      <div *ngIf="error" class="alert alert-primary mt-2 mb-0" role="alert" >
+        {{error}}
+      </div>
+      <button type="submit" class="btn btn-primary mt-5">Guardar</button>
+
+</form>
