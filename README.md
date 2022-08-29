@@ -8,6 +8,6 @@ Ejecutar npm install para levantar plugins y dependencias
 Para Ejecutar el codigo ng serve y levantar en un browser (seteado al puerto 4200 por defecto
 
 ## Que incluye
-Dos paginas para listar y crear 
-Utilizo para almacenar los datos un array en un servicio global
+Dos paginas para listar y crear <br />
+Utilizo para almacenar los datos un array en un servicio global<br />
 Creé un Pipe simple solo para mostrar el nivel de stock
